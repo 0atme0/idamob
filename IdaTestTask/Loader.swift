@@ -12,7 +12,7 @@ import SWXMLHash
 import RealmSwift
 //Load data, parse and save to db
 class Loader {
-    func getDaily() {
+    func getDaily(completion:()->()) {
         let urlString = "http://www.cbr.ru/scripts/XML_daily.asp"
 
         Alamofire.request(.GET, "http://www.cbr.ru/scripts/XML_daily.asp", parameters: nil)
@@ -34,6 +34,7 @@ class Loader {
                         realm.add(newItem, update: true)
                     }
                 }
+                completion()
         }
     }
 

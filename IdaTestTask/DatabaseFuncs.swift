@@ -16,5 +16,18 @@ class DbLoad {
         print(total)
     }
     
+    func loadDataFromDb(completion:([Valute])->()) {
+        var arrayValute : [Valute]  = []
+        let realm = try! Realm()
+        for vol in realm.objects(ValuteDB) {
+            let valute = Valute()
+            valute.id = vol.id
+            valute.name = vol.name
+            valute.nominal = vol.nominal
+            arrayValute.append(valute)
+        }
+        completion(arrayValute)
+    }
+    
     
 }

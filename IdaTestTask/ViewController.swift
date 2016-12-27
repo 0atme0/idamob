@@ -12,19 +12,30 @@ class ViewController: UIViewController{
 
     let load = Loader()
     let db = DbLoad()
+    var dataSource : [Valute] = []
     @IBOutlet weak var valuteTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initTable()
-        load.getDaily()
-        db.count()
+        loadData()
 
         // Do any additional setup after loading the view, typically from a nib.
     }
     func initTable(){
         valuteTable.delegate = self
         valuteTable.dataSource = self
+    }
+    
+    func loadData() {
+        load.getDaily({
+            _ in
+            self.db.loadDataFromDb({
+                array in
+                self.dataSource = array
+                self.valuteTable.reloadData()
+            })
+        })
     }
 
     
@@ -41,7 +52,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         
-        return 2
+        return dataSource.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
