@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9FD7189B858D8B9FF61F194 /* Pods_IdaTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C460F2E5268704B2A77CDC /* Pods_IdaTestTask.framework */; };
 		E344EF811E12CAF600BD617F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E344EF801E12CAF600BD617F /* AppDelegate.swift */; };
 		E344EF831E12CAF600BD617F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E344EF821E12CAF600BD617F /* ViewController.swift */; };
 		E344EF861E12CAF600BD617F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E344EF841E12CAF600BD617F /* Main.storyboard */; };
 		E344EF881E12CAF600BD617F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E344EF871E12CAF600BD617F /* Assets.xcassets */; };
 		E344EF8B1E12CAF600BD617F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E344EF891E12CAF600BD617F /* LaunchScreen.storyboard */; };
+		E344EF931E12D99100BD617F /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E344EF921E12D99100BD617F /* Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		079E9BCCE474B9E5E7D2B3E4 /* Pods-IdaTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaTestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IdaTestTask/Pods-IdaTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		3227B47316B7FF0955097DA1 /* Pods-IdaTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdaTestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-IdaTestTask/Pods-IdaTestTask.release.xcconfig"; sourceTree = "<group>"; };
+		A1C460F2E5268704B2A77CDC /* Pods_IdaTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdaTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E344EF7D1E12CAF600BD617F /* IdaTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdaTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E344EF801E12CAF600BD617F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E344EF821E12CAF600BD617F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		E344EF871E12CAF600BD617F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E344EF8A1E12CAF600BD617F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E344EF8C1E12CAF600BD617F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E344EF921E12D99100BD617F /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FD7189B858D8B9FF61F194 /* Pods_IdaTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5838534CCE8F3312D29E8C46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1C460F2E5268704B2A77CDC /* Pods_IdaTestTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		722F99A88C6E2CBA35C88195 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				079E9BCCE474B9E5E7D2B3E4 /* Pods-IdaTestTask.debug.xcconfig */,
+				3227B47316B7FF0955097DA1 /* Pods-IdaTestTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E344EF741E12CAF600BD617F = {
 			isa = PBXGroup;
 			children = (
 				E344EF7F1E12CAF600BD617F /* IdaTestTask */,
 				E344EF7E1E12CAF600BD617F /* Products */,
+				722F99A88C6E2CBA35C88195 /* Pods */,
+				5838534CCE8F3312D29E8C46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				E344EF801E12CAF600BD617F /* AppDelegate.swift */,
+				E344EF921E12D99100BD617F /* Loader.swift */,
 				E344EF821E12CAF600BD617F /* ViewController.swift */,
 				E344EF841E12CAF600BD617F /* Main.storyboard */,
 				E344EF871E12CAF600BD617F /* Assets.xcassets */,
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E344EF8F1E12CAF600BD617F /* Build configuration list for PBXNativeTarget "IdaTestTask" */;
 			buildPhases = (
+				E6F68AC99B8C4A84EE2E16AF /* [CP] Check Pods Manifest.lock */,
 				E344EF791E12CAF600BD617F /* Sources */,
 				E344EF7A1E12CAF600BD617F /* Frameworks */,
 				E344EF7B1E12CAF600BD617F /* Resources */,
+				E4ADBD1BCD172C9F12521B05 /* [CP] Embed Pods Frameworks */,
+				FD5289D24EF73DD3C50CF589 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +161,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E4ADBD1BCD172C9F12521B05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdaTestTask/Pods-IdaTestTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6F68AC99B8C4A84EE2E16AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD5289D24EF73DD3C50CF589 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IdaTestTask/Pods-IdaTestTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E344EF791E12CAF600BD617F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +216,7 @@
 			files = (
 				E344EF831E12CAF600BD617F /* ViewController.swift in Sources */,
 				E344EF811E12CAF600BD617F /* AppDelegate.swift in Sources */,
+				E344EF931E12D99100BD617F /* Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,25 +337,27 @@
 		};
 		E344EF901E12CAF600BD617F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 079E9BCCE474B9E5E7D2B3E4 /* Pods-IdaTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IdaTestTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-11.IdaTestTask";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		E344EF911E12CAF600BD617F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3227B47316B7FF0955097DA1 /* Pods-IdaTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IdaTestTask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-11.IdaTestTask";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -299,6 +380,7 @@
 				E344EF911E12CAF600BD617F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
