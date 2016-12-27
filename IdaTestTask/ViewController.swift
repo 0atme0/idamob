@@ -47,6 +47,8 @@ class ViewController: UIViewController{
 
 
 }
+
+//MARK: - UITableViewDelegate, UITableViewDataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,7 +59,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("valuteCell", forIndexPath: indexPath) as! ValuteTableViewCell
- 
+        cell.config(dataSource[indexPath.row])
         
         return cell
     }

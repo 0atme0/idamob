@@ -92,8 +92,6 @@
 				E344EF991E12E75F00BD617F /* View */,
 				E344EF9A1E12E76D00BD617F /* Controller */,
 				E344EF801E12CAF600BD617F /* AppDelegate.swift */,
-				E344EF921E12D99100BD617F /* Loader.swift */,
-				E344EF9E1E12E94700BD617F /* DatabaseFuncs.swift */,
 				E344EF841E12CAF600BD617F /* Main.storyboard */,
 				E344EF871E12CAF600BD617F /* Assets.xcassets */,
 				E344EF891E12CAF600BD617F /* LaunchScreen.storyboard */,
@@ -122,6 +120,8 @@
 		E344EF9A1E12E76D00BD617F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E344EF921E12D99100BD617F /* Loader.swift */,
+				E344EF9E1E12E94700BD617F /* DatabaseFuncs.swift */,
 				E344EF821E12CAF600BD617F /* ViewController.swift */,
 			);
 			name = Controller;

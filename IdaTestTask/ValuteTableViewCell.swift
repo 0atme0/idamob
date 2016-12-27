@@ -9,6 +9,8 @@
 import UIKit
 
 class ValuteTableViewCell: UITableViewCell {
+    @IBOutlet weak var value: UILabel!
+    @IBOutlet weak var name: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +24,8 @@ class ValuteTableViewCell: UITableViewCell {
     }
     
     func config(cell:Valute) {
+        value.text = cell.nominal
+        name.text = cell.name
         
     }
 

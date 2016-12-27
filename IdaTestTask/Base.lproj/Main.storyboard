@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,7 +32,37 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rx5-Av-DPp" id="yVU-zd-WZF">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2b-Ul-3FB">
+                                                    <rect key="frame" x="28" y="8" width="257" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2W5-DD-bto">
+                                                    <rect key="frame" x="305" y="8" width="42" height="27.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="YBo-MM-ah8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2W5-DD-bto" secondAttribute="trailing" constant="20" id="069-eh-thJ"/>
+                                                <constraint firstItem="2W5-DD-bto" firstAttribute="leading" secondItem="I2b-Ul-3FB" secondAttribute="trailing" constant="20" id="6zX-TO-3uG"/>
+                                                <constraint firstItem="I2b-Ul-3FB" firstAttribute="leading" secondItem="yVU-zd-WZF" secondAttribute="leadingMargin" constant="20" id="B80-OZ-rDb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="I2b-Ul-3FB" secondAttribute="bottom" id="BgP-rQ-iAo"/>
+                                                <constraint firstItem="2W5-DD-bto" firstAttribute="top" secondItem="yVU-zd-WZF" secondAttribute="topMargin" id="bNR-Rb-7TQ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2W5-DD-bto" secondAttribute="bottom" id="mUt-C9-KfY"/>
+                                                <constraint firstItem="I2b-Ul-3FB" firstAttribute="top" secondItem="yVU-zd-WZF" secondAttribute="topMargin" id="tuA-fb-YG8"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="I2b-Ul-3FB" id="QcS-rX-6PU"/>
+                                            <outlet property="value" destination="2W5-DD-bto" id="AEr-Y5-sVZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
