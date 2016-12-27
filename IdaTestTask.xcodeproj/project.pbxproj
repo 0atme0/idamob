@@ -16,6 +16,8 @@
 		E344EF931E12D99100BD617F /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E344EF921E12D99100BD617F /* Loader.swift */; };
 		E344EF951E12DCC500BD617F /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = E344EF941E12DCC500BD617F /* Database.swift */; };
 		E344EF971E12E29500BD617F /* ParseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E344EF961E12E29500BD617F /* ParseClass.swift */; };
+		E344EF9D1E12E84B00BD617F /* ValuteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E344EF9C1E12E84B00BD617F /* ValuteTableViewCell.swift */; };
+		E344EF9F1E12E94700BD617F /* DatabaseFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E344EF9E1E12E94700BD617F /* DatabaseFuncs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		E344EF921E12D99100BD617F /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		E344EF941E12DCC500BD617F /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		E344EF961E12E29500BD617F /* ParseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClass.swift; sourceTree = "<group>"; };
+		E344EF9C1E12E84B00BD617F /* ValuteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuteTableViewCell.swift; sourceTree = "<group>"; };
+		E344EF9E1E12E94700BD617F /* DatabaseFuncs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseFuncs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				E344EF9A1E12E76D00BD617F /* Controller */,
 				E344EF801E12CAF600BD617F /* AppDelegate.swift */,
 				E344EF921E12D99100BD617F /* Loader.swift */,
+				E344EF9E1E12E94700BD617F /* DatabaseFuncs.swift */,
 				E344EF841E12CAF600BD617F /* Main.storyboard */,
 				E344EF871E12CAF600BD617F /* Assets.xcassets */,
 				E344EF891E12CAF600BD617F /* LaunchScreen.storyboard */,
@@ -109,6 +114,7 @@
 		E344EF991E12E75F00BD617F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E344EF9C1E12E84B00BD617F /* ValuteTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -244,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E344EF9D1E12E84B00BD617F /* ValuteTableViewCell.swift in Sources */,
 				E344EF831E12CAF600BD617F /* ViewController.swift in Sources */,
+				E344EF9F1E12E94700BD617F /* DatabaseFuncs.swift in Sources */,
 				E344EF811E12CAF600BD617F /* AppDelegate.swift in Sources */,
 				E344EF951E12DCC500BD617F /* Database.swift in Sources */,
 				E344EF971E12E29500BD617F /* ParseClass.swift in Sources */,
