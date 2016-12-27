@@ -31,12 +31,20 @@ class ViewController: UIViewController{
     
     func loadData() {
         load.getDaily({
-            _ in
+            boolLoad in
+            if !boolLoad {
+                self.addAlert()
+
+            }
             self.db.loadDataFromDb({
                 array in
                 self.dataSource = array
+                if self.dataSource.count == 0 {
+                    self.addAlert()
+                }
                 self.valuteTable.reloadData()
                 self.refreshControl.endRefreshing()
+
             })
         })
     }
@@ -53,6 +61,17 @@ class ViewController: UIViewController{
     
     }
     
+    func addAlert() {
+        let alertController = UIAlertController(title: "Warning", message:
+            "Connection problems!", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: {
+            _ in
+            self.loadData()
+        }))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -66,7 +85,6 @@ class ViewController: UIViewController{
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
         
         return dataSource.count
     }

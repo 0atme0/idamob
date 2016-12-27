@@ -12,11 +12,12 @@ import SWXMLHash
 import RealmSwift
 //Load data, parse and save to db
 class Loader {
-    func getDaily(completion:()->()) {
+    func getDaily(completion:(Bool)->()) {
         let urlString = "http://www.cbr.ru/scripts/XML_daily.asp"
 
-        Alamofire.request(.GET, "http://www.cbr.ru/scripts/XML_daily.asp", parameters: nil)
+        Alamofire.request(.GET, urlString, parameters: nil)
             .response { (request, response, data, error) in
+                
                 var xml = SWXMLHash.parse(data!)
                 for value in xml["ValCurs"]["Valute"] {
                     let newItem = ValuteDB()
@@ -34,7 +35,12 @@ class Loader {
                         realm.add(newItem, update: true)
                     }
                 }
-                completion()
+
+                if response != nil {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
         }
     }
 
