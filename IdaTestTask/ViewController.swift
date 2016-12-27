@@ -14,7 +14,8 @@ class ViewController: UIViewController{
     let db = DbLoad()
     var dataSource : [Valute] = []
     @IBOutlet weak var valuteTable: UITableView!
-    
+    var refreshControl: UIRefreshControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initTable()
@@ -25,6 +26,7 @@ class ViewController: UIViewController{
     func initTable(){
         valuteTable.delegate = self
         valuteTable.dataSource = self
+        refreshTable()
     }
     
     func loadData() {
@@ -34,10 +36,22 @@ class ViewController: UIViewController{
                 array in
                 self.dataSource = array
                 self.valuteTable.reloadData()
+                self.refreshControl.endRefreshing()
             })
         })
     }
 
+    func refreshTable() {
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        valuteTable.addSubview(refreshControl) // not required when using UITableViewController
+    }
+    
+    func refresh(sender:AnyObject) {
+        loadData()
+    
+    }
     
     
     override func didReceiveMemoryWarning() {
