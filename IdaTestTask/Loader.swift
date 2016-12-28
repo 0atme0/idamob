@@ -19,6 +19,7 @@ class Loader {
             .response { (request, response, data, error) in
                 
                 var xml = SWXMLHash.parse(data!)
+                print(xml)
                 for value in xml["ValCurs"]["Valute"] {
                     let newItem = ValuteDB()
                     if let code = value["NumCode"].element?.text {
@@ -27,7 +28,7 @@ class Loader {
                     if let name = value["Name"].element?.text {
                         newItem.name = name
                     }
-                    if let nominal = value["Nominal"].element?.text {
+                    if let nominal = value["Value"].element?.text {
                         newItem.nominal = nominal
                     }
                     let realm = try! Realm()

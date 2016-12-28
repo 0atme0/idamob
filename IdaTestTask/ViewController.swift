@@ -64,10 +64,7 @@ class ViewController: UIViewController{
     func addAlert() {
         let alertController = UIAlertController(title: "Warning", message:
             "Connection problems!", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: {
-            _ in
-            self.loadData()
-        }))
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }

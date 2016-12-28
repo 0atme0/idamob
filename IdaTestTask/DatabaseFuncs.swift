@@ -10,12 +10,7 @@ import Foundation
 import RealmSwift
 
 class DbLoad {
-    func count() {
-        let realm = try! Realm()
-        let total: Int = realm.objects(ValuteDB).count
-        print(total)
-    }
-    
+
     func loadDataFromDb(completion:([Valute])->()) {
         var arrayValute : [Valute]  = []
         let realm = try! Realm()
